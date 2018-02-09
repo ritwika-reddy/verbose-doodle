@@ -1,0 +1,50 @@
+0x08048464 <launch+0>:	push   %ebp
+0x08048465 <launch+1>:	mov    %esp,%ebp
+0x08048467 <launch+3>:	sub    $0x18,%esp
+0x0804846a <launch+6>:	mov    0x8(%ebp),%eax
+0x0804846d <launch+9>:	mov    %eax,0x4(%esp)
+0x08048471 <launch+13>:	lea    -0x2(%ebp),%eax
+0x08048474 <launch+16>:	mov    %eax,(%esp)
+0x08048477 <launch+19>:	call   0x804836c <strcpy@plt>
+0x0804847c <launch+24>:	leave  
+0x0804847d <launch+25>:	ret  
+
+/tmp/vulnerable2 -1073741190,$(cat as.txt)
+
+0x080484d4 <launch+0>:	push   %ebp
+0x080484d5 <launch+1>:	mov    %esp,%ebp
+0x080484d7 <launch+3>:	sub    $0x2958,%esp
+0x080484dd <launch+9>:	cmpl   $0x20f,0xc(%ebp)
+0x080484e4 <launch+16>:	jg     0x8048529 <launch+85>
+0x080484e6 <launch+18>:	mov    0xc(%ebp),%edx
+0x080484e9 <launch+21>:	mov    %edx,%eax
+0x080484eb <launch+23>:	shl    $0x2,%eax
+0x080484ee <launch+26>:	add    %edx,%eax
+0x080484f0 <launch+28>:	shl    $0x2,%eax
+0x080484f3 <launch+31>:	mov    %eax,0x8(%esp)
+0x080484f7 <launch+35>:	mov    0x8(%ebp),%eax
+0x080484fa <launch+38>:	mov    %eax,0x4(%esp)
+0x080484fe <launch+42>:	lea    -0x2940(%ebp),%eax
+0x08048504 <launch+48>:	mov    %eax,(%esp)
+0x08048507 <launch+51>:	call   0x80483b4 <memcpy@plt>
+0x0804850c <launch+56>:	mov    0xc(%ebp),%edx
+0x0804850f <launch+59>:	mov    %edx,%eax
+0x08048511 <launch+61>:	shl    $0x2,%eax
+0x08048514 <launch+64>:	add    %edx,%eax
+0x08048516 <launch+66>:	shl    $0x2,%eax
+0x08048519 <launch+69>:	mov    %eax,0x4(%esp)
+0x0804851d <launch+73>:	movl   $0x8048730,(%esp)
+0x08048524 <launch+80>:	call   0x80483e4 <printf@plt>
+0x08048529 <launch+85>:	leave  
+0x0804852a <launch+86>:	ret    
+
+/tmp/vulnerable2 -214747900,$(cat as.txt)
+
+/tmp/vulnerable2 -214747836,$(cat a1.txt)
+
+
+
+
+
+
+
